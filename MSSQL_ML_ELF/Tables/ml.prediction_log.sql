@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [ml].[prediction_log]
 (
-	[id] BIGINT NOT NULL PRIMARY KEY, 
+	[id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
 	[model_id] INT,
     [destination_table] NVARCHAR(126) NULL, 
     [earliest_destination_id] BIGINT NULL, 
