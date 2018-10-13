@@ -14,4 +14,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="id" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="90812ce3-7e19-4324-a080-f3fbe5fbd6f5" ChangeDateTime="10/13/2018 16:21:56">
+    <Property Name="ElementName" Value="[ml].[prediction_log].[destination_id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ml].[prediction_log]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="earliest_destination_id" />
+  </Operation>
 </Operations>

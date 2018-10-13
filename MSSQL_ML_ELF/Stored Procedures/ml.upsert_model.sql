@@ -1,12 +1,12 @@
 ﻿CREATE PROCEDURE [ml].[upsert_model]
   @name  NVARCHAR(50) 
 , @model VARBINARY(max) 
-, @training_n INT
-, @test_n INT
-, @key_metric VARCHAR(50)
-, @key_metric_val DECIMAL(10,10)
-, @metrics VARCHAR(MAX)
-, @info VARCHAR(MAX)
+, @training_n INT = NULL
+, @test_n INT = NULL
+, @key_metric VARCHAR(50) = NULL
+, @key_metric_val DECIMAL(10,10) = NULL
+, @metrics VARCHAR(MAX) = NULL
+, @info VARCHAR(MAX) = NULL
 
 AS
 WITH MySource as (

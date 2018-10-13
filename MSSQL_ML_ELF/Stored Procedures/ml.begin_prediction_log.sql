@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [ml].[begin_log]
+﻿CREATE PROCEDURE [ml].[begin_prediction_log]
 	@model_id int,
 	@destination_table INT = "[ml].[prediction]"
 AS
