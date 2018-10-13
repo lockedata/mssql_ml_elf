@@ -7,4 +7,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[CK_model_name]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="34fec910-a5fe-430d-92d0-746fc251e8d1" ChangeDateTime="10/13/2018 11:41:02">
+    <Property Name="ElementName" Value="[ml].[prediction].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ml].[prediction]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
 </Operations>
