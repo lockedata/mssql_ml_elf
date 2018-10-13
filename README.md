@@ -1,5 +1,11 @@
 # mssql_ml_elf
-Execution and Logging Framework (ELF) for ML models in SQL Server
+Execution and Logging Framework (ELF) for ML models in SQL Server.
+
+This functionality is bundled up in an SSDT database project so that it can be deployed anywhere. 
+
+## Compatibility
+As this is intended to surround the ML Services components, you can only deploy to 2016 and beyond.  
+Current compatibility is full for Windows, in preview in Azure SQL (with R only), and coming in Linux 2019.
 
 ## Key components
 - `[model]` is where models for feature engineering and scoring live.
