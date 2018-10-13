@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="af872b05-3591-45e6-8b85-1c98c3427b5d" ChangeDateTime="10/13/2018 10:28:29">
+    <Property Name="ElementName" Value="[dbo].[CK_model_Column]" />
+    <Property Name="ElementType" Value="SqlCheckConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[model]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[CK_model_name]" />
+  </Operation>
+</Operations>
