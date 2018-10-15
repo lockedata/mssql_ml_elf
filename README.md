@@ -15,3 +15,11 @@ Current compatibility is full for Windows, in preview in Azure SQL (with R only)
 
 ## Samples
 The `[samples]` schema shows how the base `[ml]` components can be used in a realistic scenario.
+
+## Recommended Reading
+
+### Python
+[Python For Beginners] https://www.python.org/about/gettingstarted/
+
+### Java
+[Java For Beginners] https://docs.oracle.com/javase/tutorial/java/index.html
