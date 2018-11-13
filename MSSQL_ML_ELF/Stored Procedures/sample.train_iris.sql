@@ -17,14 +17,6 @@ AS
 	EXECUTE sp_execute_external_script
 	@language = N'R'
 	, @script = N'
-		# Some prep if run for the first and in a clean environment
-		if(!require(dplyr)) install.packages("dplyr")
-		if(!require(recipes)) install.packages("recipes")
-		if(!require(broom)) install.packages("broom")
-		if(!require(rsample)) install.packages("rsample")
-		if(!require(jsonlite)) install.packages("jsonlite")
-		if(!require(sessioninfo)) install.packages("sessioninfo")
-
 		# Load R packages for use
 		library("dplyr")
 		library("recipes")

@@ -26,10 +26,10 @@ AS
 	DECLARE @IDList TABLE(ID INT); 
 
 	BEGIN TRY 
-	INSERT INTO [ml].[prediction] (
-	[numeric_prediction], 
-	[features])
-	Output INSERTED.ID Into @IDList(ID)
+
+	CREATE TABLE #tmp ([numeric_prediction] FLOAT, [features] VARCHAR(MAX))
+    
+	INSERT INTO #tmp
 	EXECUTE sp_execute_external_script
 	@language = N'R'
 	, @script = N'
@@ -60,6 +60,12 @@ AS
     , @femodel = @fe_model
 	, @mlmodel = @ml_model
 	
+	INSERT INTO [ml].[prediction] (
+	[numeric_prediction], 
+	[features])
+	OUTPUT INSERTED.id INTO @IDList(ID)
+	SELECT * FROM #tmp
+
 	DECLARE @smallest bigint = (SELECT min(ID) from @IDList);
 	DECLARE @largest  bigint = (SELECT MAX(ID) from @IDList);
 

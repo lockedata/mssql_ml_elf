@@ -73,24 +73,19 @@
     <Build Include="Tables\ml.prediction.sql" />
     <Build Include="Stored Procedures\ml.insert_prediction.sql" />
     <Build Include="Stored Procedures\sample.train_iris.sql" />
-    <Build Include="Stored Procedures\score_iris.sql" />
+    <Build Include="Stored Procedures\sample.score_iris.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="MSSQL_ML_ELF.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
-      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
-      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
-      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
-    </ArtifactReference>
-    <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\msdb.dacpac">
-      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\msdb.dacpac</HintPath>
-      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
-      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
-    </ArtifactReference>
+    <PostDeploy Include="Post Deployment\Script.PostDeployment1.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Post Deployment\Script.PostDeployment1.sql" />
+    <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\140\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\140\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
   </ItemGroup>
 </Project>
