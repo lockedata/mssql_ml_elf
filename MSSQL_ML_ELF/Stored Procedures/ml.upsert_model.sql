@@ -4,7 +4,7 @@
 , @training_n INT = NULL
 , @test_n INT = NULL
 , @key_metric VARCHAR(50) = NULL
-, @key_metric_val DECIMAL(10,10) = NULL
+, @key_metric_val FLOAT = NULL
 , @metrics VARCHAR(MAX) = NULL
 , @info VARCHAR(MAX) = NULL
 

@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [sample].[train_iris]
-     @fe_name VARCHAR(50) = "iris_FE"
-   , @ml_name VARCHAR(50) = "iris_Cluster"
+     @fe_name VARCHAR(50) = 'iris_FE'
+   , @ml_name VARCHAR(50) = 'iris_Cluster'
 AS
 	-- Variables output by training process
 	DECLARE 

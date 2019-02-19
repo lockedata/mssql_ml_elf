@@ -6,7 +6,7 @@
 	[training_observations] INT,
 	[test_observations] INT,
 	[key_metric] VARCHAR(50),
-	[key_metric_value] DECIMAL(10,10),
+	[key_metric_value] FLOAT,
 	[metrics] VARCHAR(MAX),
 	[info] VARCHAR(MAX),
 	[SysStart] DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,

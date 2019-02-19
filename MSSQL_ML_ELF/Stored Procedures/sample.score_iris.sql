@@ -1,21 +1,23 @@
 ﻿CREATE PROCEDURE [sample].[score_iris]
 	@sql NVARCHAR(MAX) = 'SELECT 1'
+	,@fe_name VARCHAR(50) = 'iris_FE'
+   , @ml_name VARCHAR(50) = 'iris_Cluster'
 AS
 
 	DECLARE @fe_model varbinary(max) = (
 	  SELECT [model]
 	  FROM [ml].[model]
-	  WHERE [name] = 'iris_FE');
+	  WHERE [name] = @fe_name);
 
 	DECLARE @ml_model varbinary(max) = (
 	  SELECT [model]
 	  FROM [ml].[model]
-	  WHERE [name] = 'iris_Clustering');
+	  WHERE [name] = @ml_name);
 
-	DECLARE @modelid int = (
+	DECLARE @modelid varchar(250) = (
 	  SELECT [id]
 	  FROM [ml].[model]
-	  WHERE [name] = 'iris_Clustering');
+	  WHERE [name] = @ml_name);
 
 	DECLARE @logid BIGINT 
 
