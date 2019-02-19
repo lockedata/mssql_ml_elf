@@ -66,8 +66,8 @@ AS
 		inf = toJSON(package_info())
 
 		# Convert models for output
-		femodel = paste0(serialize(transform, NULL), collapse = "")
-		mlmodel = paste0(serialize(km, NULL), collapse = "")
+		femodel = serialize(transform, NULL)
+		mlmodel = serialize(km, NULL)
 
 	'
 	, @input_data_1 = N'SELECT 1'
