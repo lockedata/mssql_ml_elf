@@ -38,14 +38,15 @@ AS
 	BEGIN TRY 
 
 	CREATE TABLE #tmp ([numeric_prediction] FLOAT, [features] VARCHAR(MAX))
-    
+    PRINT 'Temp table created';
+
 	INSERT INTO #tmp
 	EXECUTE sp_execute_external_script
 	@language = N'R'
 	, @script = N'
-		library(purrr)
-		library(recipes)
-		library(jsonlite)
+		suppressMessages(library(purrr))
+		suppressMessages(library(recipes))
+		suppressMessages(library(jsonlite))
 
 		# handle inputs
 		fe_model = unserialize(femodel)
@@ -68,9 +69,9 @@ AS
 		 @femodel VARBINARY(MAX)
 	   , @mlmodel VARBINARY(MAX)'
     , @femodel = @fe_model
-	, @mlmodel = @ml_model
+	, @mlmodel = @ml_model;
 
-	DECLARE @tmprowcount int = (SELECT COUNT(*) FROM #tmp)
+	DECLARE @tmprowcount VARCHAR(20) = (SELECT CAST(COUNT(*)  AS VARCHAR(20)) FROM #tmp);
 	PRINT 'Rows generated is '+ @tmprowcount;
 	
 	INSERT INTO [ml].[prediction] (
@@ -79,11 +80,11 @@ AS
 	OUTPUT INSERTED.id INTO @IDList(ID)
 	SELECT * FROM #tmp
 
-	DECLARE @idlistrowcount int = (SELECT COUNT(*) FROM @IDList)
+	DECLARE @idlistrowcount VARCHAR(20) = (SELECT CAST(COUNT(*) AS VARCHAR(20)) FROM @IDList)
 	PRINT 'Rows added to predictions are '+ @idlistrowcount;
 
-	DECLARE @smallest bigint = (SELECT min(ID) from @IDList);
-	DECLARE @largest  bigint = (SELECT MAX(ID) from @IDList);
+	DECLARE @smallest VARCHAR(20) = (SELECT CAST(min(ID) AS VARCHAR(20)) from @IDList);
+	DECLARE @largest  VARCHAR(20) = (SELECT CAST(MAX(ID) AS VARCHAR(20)) from @IDList);
 
 	PRINT 'ID range is '+ @smallest + 'to ' + @largest;
 
@@ -92,6 +93,7 @@ AS
 	, @earliest_destination_id = @smallest
 	, @latest_destination_id = @largest
 
+	PRINT 'Log ended'
 	END TRY
 	BEGIN CATCH
 	DECLARE @error VARCHAR(MAX) = (SELECT CONCAT(
@@ -102,6 +104,9 @@ AS
 	EXECUTE [ml].[end_prediction_log]
 	@log_id = @logid
 	, @errors = @error
+
+	PRINT 'Error logged'
+
 	END CATCH
 
 	PRINT 'Execution finished'
