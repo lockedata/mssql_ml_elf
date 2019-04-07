@@ -18,6 +18,8 @@ This functionality is bundled up in a database project so that it can be deploye
 
 *As everyone has their own set of requirements this can be used as-is or as a starting point for discussion as to what your requirements are and what the resulting data model should look like.*
 
+[Example use](#example-use) | [Key components](#key-components) | [General](#general)
+
 ## Example use
 The `[samples]` schema shows how the base `[ml]` components can be used in a realistic scenario to train a feature engineering model and a predictive model, store these and then use them in a predictive model scenario.
 
