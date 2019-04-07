@@ -93,6 +93,8 @@ As this is intended to surround the ML Services components, you can only deploy 
 ### Contributing
 Thanks for reading this section! Hopefully you're interested in possibly contributing into this project. If you're a SQL person on a data science person this is a chance to pick up or deepen skills in these areas. We've put together a bunch of [help wanted issues](https://github.com/lockedata/mssql_ml_elf/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) that you could pick up to learn about unit testing, stored procedure writing, model development and more.
 
+If you're ready to go and you'd like to get started, hit the Fork button now. [![GitHub forks](https://img.shields.io/github/forks/lockedata/mssql_ml_elf.svg?style=social)](https://github.com/lockedata/mssql_ml_elf/fork)
+
 If you'd like to help but aren't quite sure how to get started you can also chat to us on [Slack](https://join.slack.com/t/lockedata/shared_invite/enQtMjkwNjY3ODkwMzg2LTI1OGU1NTM3ZGIyZGFiNTdlODI3MzU2N2ZlNDczMjM4M2U2OWVmNDMzZTQ1ZGNlZDQ3MGM2MGVjMjI2MWIyMjI) and we'll mentor you through the process.
 
 ### Notes
