@@ -1,12 +1,13 @@
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
-public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) 
+public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![Locke Data
+Slack](https://img.shields.io/badge/Slack-discuss-blue.svg?logo=slack&longCache=true&style=flat)](https://join.slack.com/t/lockedata/shared_invite/enQtMjkwNjY3ODkwMzg2LTI1OGU1NTM3ZGIyZGFiNTdlODI3MzU2N2ZlNDczMjM4M2U2OWVmNDMzZTQ1ZGNlZDQ3MGM2MGVjMjI2MWIyMjI)
 
-![GitHub issues by-label](https://img.shields.io/github/issues-raw/lockedata/mssql_ml_elf/help%20wanted.svg)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lockedata/mssql_ml_elf.svg)
+![GitHub issues by-label](https://img.shields.io/github/issues-raw/lockedata/mssql_ml_elf/help%20wanted.svg) 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lockedata/mssql_ml_elf.svg) 
 ![GitHub contributors](https://img.shields.io/github/contributors/lockedata/mssql_ml_elf.svg)
 
-[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) 
 ![GitHub All Releases](https://img.shields.io/github/downloads/lockedata/mssql_ml_elf/total.svg)![GitHub release](https://img.shields.io/github/release/lockedata/mssql_ml_elf.svg) 
 
 
@@ -87,7 +88,13 @@ As this is intended to surround the ML Services components, you can only deploy 
 - Azure SQL DB
     + R model training and predictions
 
+### Contributing
+Thanks for reading this section! Hopefully you're interested in possibly contributing into this project. If you're a SQL person on a data science person this is a chance to pick up or deepen skills in these areas. We've put together a bunch of [help wanted issues](https://github.com/lockedata/mssql_ml_elf/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) that you could pick up to learn about unit testing, stored procedure writing, model development and more.
+
+If you'd like to help but aren't quite sure how to get started you can also chat to us on [Slack](https://join.slack.com/t/lockedata/shared_invite/enQtMjkwNjY3ODkwMzg2LTI1OGU1NTM3ZGIyZGFiNTdlODI3MzU2N2ZlNDczMjM4M2U2OWVmNDMzZTQ1ZGNlZDQ3MGM2MGVjMjI2MWIyMjI) and we'll mentor you through the process.
+
 ### Notes
 1. GDPR requires us to be able to tell people how we arrived at a decision so we need to be able to retrieve models and values from different points in time.
 2. From experience, we recommend using the ODBC drivers for interacting with SQL Server from R rather than the Windows native `SQL Server` driver as varbinary representations of models can have problems being transported to the DB using this driver.
 3. I have structured things to work on the basis that either single predictions or batches of predictions will be made with consecutive IDs. This means if you do batches of say a 1000 customers at a time, that I'm expecting IDs 1-1000 first, then 1001-2000 and so on rather some other selection mechanism for batching customers.
+4. All interactions in the project are governed by our [Code of Conduct](CODE_OF_CONDUCT.md) and work is contributed as [MIT](LICENSE)
