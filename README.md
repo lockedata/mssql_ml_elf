@@ -9,9 +9,11 @@ Current compatibility is full for Windows, in preview in Azure SQL (with R only)
 
 ## Key components
 - `[model]` is where models for feature engineering and scoring live.
-   + Insert or update a model with `upsert_model` and add measures of fit for monitoring
+   + Insert or update a model with the `upsert_model` stored procedure and add measures of fit for monitoring
+   + Use [TEMPORAL TABLE SQL queries](https://www.mssqltips.com/sqlservertip/5436/options-to-retrieve-sql-server-temporal-table-and-history-data/) to gain insight into model changes over time
 - `[prediction]` is a generic prediction table where you might store things for historical review and monitoring
 - `[prediction_log]` is a logging table execution information can be written to help understand speeds and errors
+   + Use the `begin_prediction_log` and `end_prediction_log` stored procedures in prediction routines to work with the logging table
 
 ## Samples
 The `[samples]` schema shows how the base `[ml]` components can be used in a realistic scenario.
