@@ -3,12 +3,12 @@ has not yet been a stable, usable release suitable for the
 public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![Locke Data
 Slack](https://img.shields.io/badge/Slack-discuss-blue.svg?logo=slack&longCache=true&style=flat)](https://join.slack.com/t/lockedata/shared_invite/enQtMjkwNjY3ODkwMzg2LTI1OGU1NTM3ZGIyZGFiNTdlODI3MzU2N2ZlNDczMjM4M2U2OWVmNDMzZTQ1ZGNlZDQ3MGM2MGVjMjI2MWIyMjI)
 
-![GitHub issues by-label](https://img.shields.io/github/issues-raw/lockedata/mssql_ml_elf/help%20wanted.svg) 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lockedata/mssql_ml_elf.svg) 
-![GitHub contributors](https://img.shields.io/github/contributors/lockedata/mssql_ml_elf.svg)
+[![GitHub issues by-label](https://img.shields.io/github/issues-raw/lockedata/mssql_ml_elf/help%20wanted.svg)](https://github.com/lockedata/mssql_ml_elf/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lockedata/mssql_ml_elf.svg)](https://github.com/lockedata/mssql_ml_elf/graphs/commit-activity)
+[![GitHub contributors](https://img.shields.io/github/contributors/lockedata/mssql_ml_elf.svg)](https://github.com/lockedata/mssql_ml_elf/graphs/contributors)
 
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) 
-![GitHub All Releases](https://img.shields.io/github/downloads/lockedata/mssql_ml_elf/total.svg)![GitHub release](https://img.shields.io/github/release/lockedata/mssql_ml_elf.svg) 
+[![GitHub All Releases](https://img.shields.io/github/downloads/lockedata/mssql_ml_elf/total.svg)![GitHub release](https://img.shields.io/github/release/lockedata/mssql_ml_elf.svg)](https://github.com/lockedata/mssql_ml_elf/releases)
 
 
 
