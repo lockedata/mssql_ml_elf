@@ -1,4 +1,17 @@
-# Execution and Logging Framework (ELF)
+[![Project Status: WIP – Initial development is in progress, but there
+has not yet been a stable, usable release suitable for the
+public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) 
+
+![GitHub issues by-label](https://img.shields.io/github/issues-raw/lockedata/mssql_ml_elf/help%20wanted.svg)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lockedata/mssql_ml_elf.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/lockedata/mssql_ml_elf.svg)
+
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+![GitHub All Releases](https://img.shields.io/github/downloads/lockedata/mssql_ml_elf/total.svg)![GitHub release](https://img.shields.io/github/release/lockedata/mssql_ml_elf.svg) 
+
+
+
+# Execution and Logging Framework (ELF) 🧝‍♀️
 This project can be used as the basis for an operational ML training and prediction capability in SQL Server and Azure SQL.
 This functionality is bundled up in a database project so that it can be deployed against different targets and managed under source control. 
 
