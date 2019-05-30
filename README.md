@@ -90,6 +90,32 @@ As this is intended to surround the ML Services components, you can only deploy 
 - Azure SQL DB
     + R model training and predictions
 
+### Installing R packages
+To run the samples and similar stored procedures, any R dependencies need to be installed. One of the easiest ways is with the `sqlmlutils` package.
+
+#### Command line 
+```
+git clone git@github.com:microsoft/sqlmlutils.git
+```
+
+Then open RStudio
+
+#### R
+```r
+install.packages("remotes")
+remotes::install_local("sqlmlutils/R/")
+library(sqlmlutils)
+connection <- connectionInfo(
+  server= "rinsqldb.database.windows.net",
+  database = "rinsqldb",
+  uid = "",
+  pwd = "")
+
+sql_install.packages(connectionString = connection, 
+    pkgs =c("tidyverse","recipes","sessioninfo","rsample","broom","jsonlite"), 
+    verbose = TRUE, scope = "PUBLIC")
+```
+
 ### Contributing
 Thanks for reading this section! Hopefully you're interested in possibly contributing into this project. If you're a SQL person on a data science person this is a chance to pick up or deepen skills in these areas. We've put together a bunch of [help wanted issues](https://github.com/lockedata/mssql_ml_elf/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) that you could pick up to learn about unit testing, stored procedure writing, model development and more.
 
